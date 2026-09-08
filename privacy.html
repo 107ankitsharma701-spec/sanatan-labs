@@ -23,7 +23,7 @@
     <strong>Package ID:</strong> <code>com.gitashlokpath.app</code><br>
     <strong>Developer:</strong> Sanatan Labs (India)<br>
     <strong>Contact:</strong> <a href="mailto:sanatanlabs01@gmail.com">sanatanlabs01@gmail.com</a><br>
-    <strong>Last updated:</strong> 6 September 2026
+    <strong>Last updated:</strong> 8 September 2026
   </div>
 
   <!-- ============================= ENGLISH ============================= -->
@@ -33,18 +33,20 @@
   Shrimad Bhagavad Gita with audio recitation, meanings and word-by-word explanations.</p>
 
   <div class="callout">
-    <strong>The short version:</strong> This app does not ask you to create an account, does
-    not ask for your name, phone number or location, contains no advertising, and
-    contains no analytics or tracking of any kind. The one exception is the optional
-    purchase: if you buy the full Gita outside Google Play, we ask for an email address,
-    purely so you can restore your unlock on a new phone. All verse content and audio is bundled
-    inside the app and works fully offline. Your bookmarks, listening progress and settings
-    never leave your device.
+    <strong>The short version:</strong> You can read and listen to the entire app without an
+    account. The app never asks for your name, phone number or location, contains no
+    advertising, and contains no analytics or tracking of any kind. There is one exception,
+    and only in the Indus Appstore version: unlocking the full Gita there asks you to sign in
+    with Google, so that your unlock can be restored on a new phone. Even then we keep only
+    the account identifier Google gives us — not your email address, not your name. All verse
+    content and audio is bundled inside the app and works fully offline. Your bookmarks,
+    listening progress and settings never leave your device.
   </div>
 
   <p>This policy explains, plainly and completely, what the app does and does not do with
   information. It applies to the Gita Shlok Path Android application, however you obtained
-  it — through the Google Play Store or the Indus Appstore.</p>
+  it — through the Google Play Store or the Indus Appstore. The two versions handle payment
+  differently, so sections 4 and 4a describe each one separately.</p>
 
   <h2>2. Information we do NOT collect</h2>
 
@@ -53,8 +55,7 @@
   following:</p>
 
   <ul>
-    <li>Your name, phone number or any account credentials — the app has no sign-up, no
-      login and no user accounts at all</li>
+    <li>Your name, phone number or postal address</li>
     <li>Your location, whether precise or approximate</li>
     <li>Your contacts, calendar, photos, camera, microphone or files</li>
     <li>Your device's advertising ID</li>
@@ -62,19 +63,33 @@
       profiles of any kind — the app contains no analytics SDK</li>
     <li>Any advertising or marketing identifiers — the app contains no advertising SDK and
       displays no ads</li>
+    <li>Any password — the app has no password of its own, and where Google sign-in is used
+      it is Google that handles it, never us</li>
   </ul>
 
-  <p>The app requests only the <code>INTERNET</code> permission from Android, and uses it
-  for exactly one purpose: contacting Google's billing servers and our purchase-verification
-  server when you choose to make the optional in-app purchase. Reading and listening to
-  verses requires no internet connection at all.</p>
+  <p>There is <strong>no account and no login for using the app</strong>. Reading, listening,
+  bookmarking and searching all work without identifying yourself in any way. The only place
+  an identity is involved at all is the optional purchase in the Indus Appstore version,
+  described in section 4a.</p>
+
+  <p>The app declares four Android permissions, and no others:</p>
+
+  <table>
+    <tr><th>Permission</th><th>What it is for</th></tr>
+    <tr><td><code>INTERNET</code></td><td>Only for the optional purchase and its verification. Reading and listening to verses requires no internet connection at all</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>To show the playback notification with play, pause and skip controls while audio is running</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code></td><td>To keep audio playing when the screen is off or you switch to another app</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td>The media-playback category required by Android for the above</td></tr>
+  </table>
+
+  <p>None of these permissions gives the app access to your personal data, and the app
+  requests no location, contacts, storage, camera or microphone permission of any kind.</p>
 
   <h2>3. Information stored on your device</h2>
 
   <p>The app saves a small amount of data locally so that it can remember your preferences
   between sessions. This data lives only in the app's private storage on your phone. It is
-  never uploaded, never backed up to our servers (we operate no user database), and is never
-  shared with anyone.</p>
+  never uploaded to us, and is never shared with anyone.</p>
 
   <table>
     <tr><th>What is stored</th><th>Why</th></tr>
@@ -82,17 +97,19 @@
     <tr><td>Last verse played and playback position</td><td>So you can resume where you left off</td></tr>
     <tr><td>Settings — language, theme, font size, default sleep timer</td><td>So you don't have to set them again</td></tr>
     <tr><td>Unlock status of the full-Gita purchase</td><td>So the app knows which chapters to make available</td></tr>
+    <tr><td>The sign-in token from your last purchase or restore (Indus Appstore version only)</td><td>So the app can silently re-check your unlock when it starts, without asking you to sign in again. It stays in the app's private storage</td></tr>
     <tr><td>The 700 verses and their encrypted audio files</td><td>Bundled with the app so it works fully offline</td></tr>
     <tr><td>A crash report, if the app has crashed</td><td>Shown to you on the next launch so you can report the problem if you wish. It is stored only on your device and is never sent anywhere automatically</td></tr>
   </table>
 
   <p>Uninstalling the app removes all of this data from your device.</p>
 
-  <h2>4. Purchases</h2>
+  <h2>4. Purchases — Google Play Store version</h2>
 
   <p>Chapters 1 and 2 are permanently free. The remaining chapters can be unlocked with a
-  single optional one-time in-app purchase. This is handled entirely by
-  <strong>Google Play Billing</strong>.</p>
+  single optional one-time in-app purchase. In the Play Store version this is handled entirely
+  by <strong>Google Play Billing</strong>, using the payment methods already on your Google
+  account. There is no separate sign-in and we ask you for nothing.</p>
 
   <ul>
     <li>We never see, receive or store your card number, bank details, UPI ID or any other
@@ -100,61 +117,95 @@
     <li>What the app receives from Google Play is a <em>purchase token</em> — an opaque
       identifier confirming that a purchase was made. It is not linked to your name or
       contact details.</li>
-    <li>That purchase token is sent to our own verification server (see section 5) so that
-      the app can confirm the purchase is genuine before unlocking content.</li>
+    <li>That purchase token is sent to our verification server (see section 5), which asks
+      Google whether the purchase is genuine and receives a yes-or-no answer. <strong>Nothing
+      is stored on our server</strong> in this flow — the check happens and is forgotten.</li>
     <li>Refunds, payment history and receipts are managed by Google Play under
       <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Refund
       requests should be made through Google Play; you may also write to us and we will help
       where we can.</li>
   </ul>
 
-  <h2>4a. Purchases made outside Google Play (Indus Appstore)</h2>
+  <h2>4a. Purchases — Indus Appstore version</h2>
 
   <p>The version of the app distributed through the Indus Appstore does not use Google Play
   Billing. Payment there is handled by <strong>Razorpay</strong>, a licensed Indian payment
-  gateway.</p>
+  gateway, and your unlock is tied to a Google account so that it can be restored later.</p>
 
-  <p>Because there is no store account behind such a purchase, we ask you for an
-  <strong>email address</strong> at checkout. This is the only personal information the app
-  ever requests, and it is used for exactly one purpose: so that you can restore your unlock
-  after reinstalling the app or moving to a new phone.</p>
+  <p><strong>Signing in with Google.</strong> When you choose to buy the full Gita, or when
+  you tap <em>Restore previous purchase</em>, the app asks you to pick a Google account. This
+  is the only moment sign-in ever appears — it never happens when you open the app, and you
+  are never made to sign in to read or listen.</p>
 
   <ul>
-    <li>We store a <strong>one-way cryptographic hash</strong> (SHA-256) of your email
-      address, not the address itself. It can be matched when you type the same address
-      again, but it cannot be read back or used to contact you.</li>
-    <li>Alongside it we store only the Razorpay order and payment identifiers and the amount
-      paid, so that a purchase can be verified and restored.</li>
-    <li>We do not send marketing email. We do not have a mailing list. We could not add you
-      to one even if we wanted to, because we do not keep your address.</li>
-    <li>Razorpay processes the payment itself and handles your card, UPI or banking details
-      under <a href="https://razorpay.com/privacy/">Razorpay's Privacy Policy</a>. We never
-      see or store those details.</li>
+    <li>Google returns a short-lived signed token to the app. The app sends it to our server
+      over an encrypted HTTPS connection.</li>
+    <li>Our server checks the signature against Google's public keys and reads exactly
+      <strong>one field</strong> from it: the <em>account identifier</em> (Google calls this
+      <code>sub</code>) — a permanent, meaningless-looking number for that account. Everything
+      else in the token is discarded, and the token itself is not stored on our server.</li>
+    <li><strong>We do not store your email address, your name or your profile photo.</strong>
+      Because the identifier is not your email address, your unlock keeps working even if you
+      later change your email, and we could not send you marketing email even if we wanted to.</li>
+    <li>We use the account identifier for one reason only: so nobody else can claim your
+      purchase, and so you can get it back on a new phone by signing in with the same account.</li>
   </ul>
+
+  <p><strong>What we keep on our server.</strong> Once a payment succeeds, a single small
+  record is written, stored against your account identifier:</p>
+
+  <table>
+    <tr><th>Field</th><th>Why it is kept</th></tr>
+    <tr><td>Account identifier (Google <code>sub</code>)</td><td>To know whose unlock this is when you restore</td></tr>
+    <tr><td>Unlocked: yes</td><td>The answer the app is asking for</td></tr>
+    <tr><td>Razorpay order ID and payment ID</td><td>To trace a payment if something goes wrong, and to process a refund</td></tr>
+    <tr><td>Amount paid and the date</td><td>Accounting, and to confirm the correct amount was charged</td></tr>
+  </table>
+
+  <p>That is the whole record. There is no name, no email address, no phone number, no
+  address and no device information in it.</p>
+
+  <p><strong>Razorpay's part.</strong> Razorpay processes the payment itself and handles your
+  card, UPI or banking details under
+  <a href="https://razorpay.com/privacy/">Razorpay's Privacy Policy</a>. We never see or store
+  those details. Razorpay's own checkout screen may ask you for contact details for its
+  receipt — anything you enter there goes to Razorpay, not to us, and the app does not fill
+  it in for you or read it back. So that a payment can later be matched to the right unlock, a
+  shortened form of the account identifier is sent to Razorpay as the order reference; it is
+  not your email address and cannot be used to contact you.</p>
 
   <h2>5. Our verification server</h2>
 
-  <p>To prevent the paid content from being unlocked fraudulently, the app verifies purchases
-  through a small server function hosted on <strong>Google Firebase Cloud Functions</strong>.
-  This is the only server the app ever contacts other than Google's own services.</p>
+  <p>To stop the paid content from being unlocked fraudulently, and to let you restore a
+  purchase, the app talks to a small server we operate on
+  <strong>Cloudflare Workers</strong>, with the record described in section 4a held in
+  <strong>Cloudflare Workers KV</strong>. This is the only server of ours the app ever
+  contacts.</p>
 
-  <p>When you make a purchase, the app sends the purchase token to this function over an
-  encrypted HTTPS connection. The function checks the token against the Google Play Developer
-  API and replies with a simple valid / not-valid answer. As part of any internet request,
-  the hosting infrastructure processes your device's IP address transiently. We do not
-  maintain a user database, do not build profiles, and do not use this data for any purpose
-  beyond validating the purchase.</p>
+  <p>The app contacts it in exactly three situations: when you make a purchase, when you tap
+  restore, and once at startup <em>only if</em> you have already bought the unlock, to
+  re-check that it is still valid. If you have not bought anything, the app makes no network
+  request at all.</p>
 
-  <p>Firebase is operated by Google and processes this data under
-  <a href="https://firebase.google.com/support/privacy">Firebase's privacy terms</a>.</p>
+  <p>As part of any internet request, the hosting infrastructure processes your device's IP
+  address transiently in order to deliver the response and to protect against abuse. We do not
+  log it into any record of ours, do not build profiles, and do not use it for any purpose
+  beyond serving the request. Cloudflare acts as our infrastructure provider under
+  <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</p>
+
+  <p>To do its job, our server in turn contacts Google (for the public keys used to check a
+  sign-in token, and for the Play Developer API in the Play Store flow) and Razorpay (to
+  confirm a payment really was received). It contacts nothing else.</p>
 
   <h2>6. Device integrity check</h2>
 
-  <p>The app may use the <strong>Google Play Integrity API</strong> to confirm that it is
-  running on a genuine, unmodified Android device and has not been tampered with. This is an
-  anti-piracy measure that protects the paid content. Where this check is active, Google
-  provides an integrity verdict and a device/app identifier for that purpose only. It is not
-  used to identify you as a person, and it is not combined with any other data.</p>
+  <p>The app contains support for the <strong>Google Play Integrity API</strong>, an
+  anti-piracy measure that confirms the app is running on a genuine, unmodified Android
+  device. <strong>This check is currently switched off</strong> and the app collects no device
+  or app identifier through it. If we enable it in a future version, we will update this page
+  before doing so. Were it enabled, it would produce an integrity verdict for that purpose
+  only; it would not be used to identify you as a person and would not be combined with any
+  other data.</p>
 
   <h2>7. Audio content</h2>
 
@@ -164,32 +215,53 @@
 
   <h2>8. Sharing and selling of data</h2>
 
-  <p>We do not sell, rent, trade or share your data with anyone — because we do not collect
-  personal data in the first place. There are no advertising partners, no data brokers and no
-  third-party analytics providers involved in this app.</p>
+  <p>We do not sell, rent, trade or share your data with anyone. There are no advertising
+  partners, no data brokers and no third-party analytics providers involved in this app.</p>
 
-  <p>The only third parties involved at all are Google Play Billing or Razorpay (to process
-  the optional purchase, depending on where you downloaded the app), Google Firebase (to
-  verify it) and the Google Play Integrity API (to protect it). Each is used strictly for the
-  purpose described above.</p>
+  <p>The only third parties involved at all are:</p>
+
+  <ul>
+    <li><strong>Google Play Billing</strong> — processes the purchase in the Play Store
+      version</li>
+    <li><strong>Google Sign-In</strong> — establishes which account owns an unlock in the
+      Indus Appstore version</li>
+    <li><strong>Razorpay</strong> — processes the purchase in the Indus Appstore version</li>
+    <li><strong>Cloudflare</strong> — hosts the verification server described in section 5</li>
+  </ul>
+
+  <p>Each is used strictly for the purpose described above, and only when you choose to make
+  or restore a purchase.</p>
 
   <h2>9. Data retention</h2>
 
   <p>Data stored on your device remains there until you delete it in the app or uninstall the
-  app. Purchase records are retained by Google Play according to Google's own policies, and
-  our verification server retains no user records.</p>
+  app.</p>
+
+  <p>In the Play Store flow, our server stores nothing at all. In the Indus Appstore flow, the
+  unlock record described in section 4a is kept for as long as your purchase is valid, because
+  deleting it would take away access you have paid for. It is removed if you ask us to delete
+  it (see section 10) or if the payment is refunded. Purchase records are separately retained
+  by Google Play or Razorpay according to their own policies and Indian tax law.</p>
 
   <h2>10. Your rights and choices</h2>
 
   <ul>
-    <li><strong>Delete your data:</strong> uninstalling the app removes everything stored on
-      your device. You may also clear the app's storage from Android Settings → Apps → Gita
-      Shlok Path → Storage.</li>
-    <li><strong>Access and correction:</strong> as we hold no personal data about you, there
-      is nothing for us to disclose or correct. If you believe otherwise, write to us and we
-      will investigate.</li>
+    <li><strong>Delete data on your device:</strong> uninstalling the app removes everything
+      stored on your device. You may also clear the app's storage from Android Settings → Apps
+      → Gita Shlok Path → Storage.</li>
+    <li><strong>Delete the unlock record on our server:</strong> write to us from the Google
+      account you used at checkout and we will delete it. Please note that this also removes
+      your unlock, and it cannot be restored afterwards — so please only ask if that is what
+      you want.</li>
+    <li><strong>Access and correction:</strong> you may ask us what we hold for your account
+      and we will tell you. As set out in section 4a, it is a single record with no name,
+      email address or contact details in it, so in practice there is very little to disclose
+      and nothing that can be incorrect about you.</li>
+    <li><strong>Withdraw consent:</strong> you can stop using the sign-in at any time simply
+      by not signing in. It is only ever asked for at purchase and restore.</li>
     <li><strong>Purchase queries:</strong> refunds and payment records are handled through
-      your Google Play account.</li>
+      your Google Play account, or through us for Indus Appstore purchases — see the
+      <a href="refund.html">Refund Policy</a>.</li>
     <li><strong>Questions:</strong> you may contact us at any time at the address below.</li>
   </ul>
 
@@ -198,15 +270,17 @@
   <p>This app is a general-audience devotional and reference app. It is not directed at
   children, and it does not knowingly collect any personal information from anyone, including
   children under the age of 13 (or the equivalent minimum age in your jurisdiction). If you
-  believe a child has provided personal information to us, please contact us — although, as
-  described above, the app provides no means for anyone to do so.</p>
+  believe a child has made a purchase or provided information to us, please contact us and we
+  will delete the record and assist with a refund.</p>
 
   <h2>12. Security</h2>
 
   <p>The verse audio is protected by two layers of encryption: the audio files are encrypted
   before being packaged into the app, and on first launch they are re-encrypted on your device
   using a key generated in the Android Keystore, which never leaves your device. All network
-  requests made by the app use encrypted HTTPS connections.</p>
+  requests made by the app use encrypted HTTPS connections. Payment amounts are decided on our
+  server rather than by the app, and every payment is re-checked directly with Razorpay before
+  an unlock is granted, so a tampered device cannot claim a purchase that did not happen.</p>
 
   <p>No system can be guaranteed perfectly secure, but since the app holds no personal data,
   the impact of any such event on your privacy is minimal by design.</p>
@@ -215,17 +289,19 @@
 
   <p>If the app's behaviour changes in a way that affects this policy, we will update this
   page and revise the "Last updated" date at the top. Significant changes will also be noted
-  in the app's release notes on Google Play. Continued use of the app after an update
-  constitutes acceptance of the revised policy.</p>
+  in the app's release notes on the Google Play Store and the Indus Appstore. Continued use of
+  the app after an update constitutes acceptance of the revised policy.</p>
 
   <h2>14. Contact</h2>
 
-  <p>For any question, concern or correction regarding this policy or the app, please write
-  to:</p>
+  <p>For any question, concern, correction or complaint regarding this policy or the app —
+  including a request to delete your data — please write to:</p>
 
   <div class="callout">
     <strong>Email:</strong> <a href="mailto:sanatanlabs01@gmail.com">sanatanlabs01@gmail.com</a><br>
-    <strong>Developer:</strong> Sanatan Labs, India
+    <strong>Developer:</strong> Sanatan Labs, India<br>
+    <strong>Grievance contact:</strong> the same address. We acknowledge within 2 working days
+    and aim to resolve within 30 days.
   </div>
 
   <p>We read every message and will respond as promptly as we are able.</p>
@@ -235,116 +311,186 @@
   <!-- ============================= हिंदी ============================= -->
   <h2 id="hindi">हिंदी में गोपनीयता नीति</h2>
 
-  <p><strong>अंतिम संशोधन: 6 सितम्बर 2026</strong></p>
+  <p><strong>अंतिम संशोधन: 8 सितम्बर 2026</strong></p>
 
   <div class="callout">
-    <strong>संक्षेप में:</strong> यह ऐप आपसे कोई खाता (account) नहीं बनवाता, आपका नाम,
-    फ़ोन नंबर या स्थान (location) नहीं माँगता, इसमें कोई विज्ञापन नहीं है, और किसी भी प्रकार
-    की ट्रैकिंग या एनालिटिक्स नहीं है। केवल एक अपवाद है — वैकल्पिक ख़रीद: यदि आप Google Play
-    के बाहर सम्पूर्ण गीता खरीदते हैं, तो हम आपसे एक ईमेल पता माँगते हैं, सिर्फ़ इसलिए कि नया
-    फ़ोन लेने पर आपका अनलॉक वापस मिल सके। सभी श्लोक और ऑडियो ऐप के भीतर ही मौजूद हैं और पूरी तरह
-    ऑफ़लाइन चलते हैं। आपके प्रिय श्लोक, सुनने की प्रगति और सेटिंग्स आपके फ़ोन से कभी बाहर नहीं
-    जाते।
+    <strong>संक्षेप में:</strong> पूरा ऐप बिना किसी खाते (account) के पढ़ा और सुना जा सकता है।
+    ऐप आपका नाम, फ़ोन नंबर या स्थान (location) कभी नहीं माँगता, इसमें कोई विज्ञापन नहीं है, और
+    किसी भी प्रकार की ट्रैकिंग या एनालिटिक्स नहीं है। केवल एक अपवाद है, और वह भी सिर्फ़ Indus
+    Appstore वाले संस्करण में — सम्पूर्ण गीता खरीदते समय आपसे Google खाते से साइन-इन करने को
+    कहा जाता है, ताकि नया फ़ोन लेने पर आपका अनलॉक वापस मिल सके। तब भी हम केवल वह पहचान-संख्या
+    रखते हैं जो Google देता है — <strong>आपका ईमेल पता नहीं, आपका नाम नहीं</strong>। सभी श्लोक
+    और ऑडियो ऐप के भीतर ही मौजूद हैं और पूरी तरह ऑफ़लाइन चलते हैं। आपके प्रिय श्लोक, सुनने की
+    प्रगति और सेटिंग्स आपके फ़ोन से कभी बाहर नहीं जाते।
   </div>
 
   <h3>1. हम क्या एकत्र नहीं करते</h3>
   <ul>
-    <li>आपका नाम, फ़ोन नंबर या कोई लॉगिन — ऐप में खाता बनाने की व्यवस्था ही नहीं है</li>
+    <li>आपका नाम, फ़ोन नंबर या डाक पता</li>
     <li>आपका स्थान (location)</li>
     <li>आपके संपर्क, कैलेंडर, फ़ोटो, कैमरा, माइक्रोफ़ोन या फ़ाइलें</li>
     <li>विज्ञापन पहचानकर्ता (advertising ID)</li>
     <li>कोई एनालिटिक्स, उपयोग-आँकड़े या व्यवहार-प्रोफ़ाइल</li>
+    <li>कोई पासवर्ड — जहाँ Google साइन-इन होता है, वह Google संभालता है, हम कभी नहीं</li>
   </ul>
-  <p>ऐप केवल <code>INTERNET</code> अनुमति लेता है, और उसका उपयोग सिर्फ़ एक काम के लिए होता है —
-  जब आप वैकल्पिक इन-ऐप ख़रीद करते हैं, तब Google के बिलिंग सर्वर और हमारे सत्यापन सर्वर से
-  संपर्क करने के लिए। श्लोक पढ़ने और सुनने के लिए इंटरनेट की कोई आवश्यकता नहीं है।</p>
+  <p>ऐप का उपयोग करने के लिए <strong>कोई खाता या लॉगिन नहीं चाहिए</strong>। पढ़ना, सुनना, प्रिय
+  करना और खोजना — सब बिना अपनी पहचान बताए चलता है। पहचान केवल एक जगह आती है: Indus Appstore
+  वाले संस्करण की वैकल्पिक ख़रीद (देखें भाग 3a)।</p>
+
+  <p>ऐप केवल चार Android अनुमतियाँ लेता है, इसके अतिरिक्त कोई नहीं:</p>
+  <ul>
+    <li><code>INTERNET</code> — सिर्फ़ वैकल्पिक ख़रीद और उसके सत्यापन के लिए। श्लोक पढ़ने और
+      सुनने के लिए इंटरनेट की कोई आवश्यकता नहीं है</li>
+    <li><code>POST_NOTIFICATIONS</code> — ऑडियो चलते समय play/pause वाली सूचना दिखाने के लिए</li>
+    <li><code>FOREGROUND_SERVICE</code> — स्क्रीन बंद होने या दूसरा ऐप खोलने पर भी ऑडियो चलता
+      रहे, इसके लिए</li>
+    <li><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> — उपर्युक्त के लिए Android द्वारा
+      आवश्यक श्रेणी</li>
+  </ul>
+  <p>इनमें से कोई भी अनुमति ऐप को आपकी व्यक्तिगत जानकारी तक पहुँच नहीं देती। स्थान, संपर्क,
+  स्टोरेज, कैमरा या माइक्रोफ़ोन की अनुमति ऐप कभी नहीं माँगता।</p>
 
   <h3>2. आपके फ़ोन पर क्या सहेजा जाता है</h3>
   <p>ऐप कुछ जानकारी केवल आपके फ़ोन की निजी स्टोरेज में सहेजता है, ताकि आपकी पसंद याद रहे। यह
-  कभी अपलोड नहीं होती और किसी के साथ साझा नहीं की जाती:</p>
+  हमें कभी अपलोड नहीं होती और किसी के साथ साझा नहीं की जाती:</p>
   <ul>
     <li>प्रिय (bookmark) किए हुए श्लोक</li>
     <li>अंतिम सुना गया श्लोक और उसकी स्थिति, ताकि आप वहीं से आगे बढ़ सकें</li>
     <li>सेटिंग्स — भाषा, थीम, फ़ॉन्ट आकार, स्लीप टाइमर</li>
     <li>पूर्ण गीता की अनलॉक स्थिति</li>
+    <li>पिछली ख़रीद या restore का साइन-इन टोकन (केवल Indus Appstore संस्करण में) — ताकि ऐप
+      खुलते ही आपका अनलॉक चुपचाप जाँच सके और आपको दोबारा साइन-इन न करना पड़े</li>
     <li>यदि ऐप कभी बंद (crash) हुआ हो, तो उसकी रिपोर्ट — जो अगली बार आपको ही दिखाई जाती है और
       स्वयं कहीं नहीं भेजी जाती</li>
   </ul>
   <p>ऐप को अनइंस्टॉल करने पर यह सारा डेटा आपके फ़ोन से हट जाता है।</p>
 
-  <h3>3. ख़रीद (Purchase)</h3>
+  <h3>3. ख़रीद — Google Play Store संस्करण</h3>
   <p>अध्याय 1 और 2 सदैव नि:शुल्क हैं। शेष अध्याय एक बार की वैकल्पिक इन-ऐप ख़रीद से खुलते हैं,
-  जिसे पूरी तरह <strong>Google Play Billing</strong> संभालता है। आपका कार्ड नंबर, बैंक विवरण
-  या UPI ID हम कभी नहीं देखते और न ही सहेजते हैं — भुगतान Google द्वारा संसाधित होता है।
-  ऐप को केवल एक <em>purchase token</em> मिलता है, जो आपके नाम या संपर्क से जुड़ा नहीं होता।
-  रिफ़ंड और भुगतान इतिहास Google Play के माध्यम से प्रबंधित होते हैं।</p>
+  जिसे Play संस्करण में पूरी तरह <strong>Google Play Billing</strong> संभालता है — कोई अलग
+  साइन-इन नहीं, और हम आपसे कुछ नहीं माँगते। आपका कार्ड नंबर, बैंक विवरण या UPI ID हम कभी नहीं
+  देखते और न ही सहेजते हैं; भुगतान Google द्वारा संसाधित होता है। ऐप को केवल एक
+  <em>purchase token</em> मिलता है, जो आपके नाम या संपर्क से जुड़ा नहीं होता। वह टोकन हमारे
+  सत्यापन सर्वर पर भेजा जाता है, जो Google से पूछकर हाँ या ना का उत्तर पाता है —
+  <strong>इस प्रक्रिया में हमारे सर्वर पर कुछ भी सहेजा नहीं जाता</strong>। रिफ़ंड और भुगतान
+  इतिहास Google Play के माध्यम से प्रबंधित होते हैं।</p>
 
-  <h3>3a. Google Play के बाहर की गई ख़रीद (Indus Appstore)</h3>
-  <p>Indus Appstore वाले संस्करण में भुगतान <strong>Razorpay</strong> द्वारा होता है। वहाँ कोई
-  स्टोर खाता नहीं होता, इसलिए ख़रीदते समय हम आपसे एक <strong>ईमेल पता</strong> माँगते हैं। यह
-  ऐप द्वारा माँगी जाने वाली एकमात्र व्यक्तिगत जानकारी है, और इसका उपयोग केवल एक काम के लिए है —
-  ताकि ऐप दोबारा इंस्टॉल करने या नया फ़ोन लेने पर आपका अनलॉक वापस मिल सके।</p>
+  <h3>3a. ख़रीद — Indus Appstore संस्करण</h3>
+  <p>Indus Appstore वाले संस्करण में भुगतान <strong>Razorpay</strong> द्वारा होता है, और आपका
+  अनलॉक एक Google खाते से जुड़ा होता है ताकि बाद में वापस मिल सके।</p>
+
+  <p><strong>Google से साइन-इन।</strong> जब आप सम्पूर्ण गीता खरीदना चुनते हैं, या
+  <em>पिछली ख़रीद वापस पाएँ</em> दबाते हैं, तभी ऐप आपसे Google खाता चुनने को कहता है। साइन-इन
+  केवल इसी क्षण आता है — ऐप खोलते समय कभी नहीं, और पढ़ने-सुनने के लिए कभी नहीं।</p>
   <ul>
-    <li>हम आपका ईमेल पता नहीं, बल्कि उसका <strong>एकतरफ़ा हैश (SHA-256)</strong> सहेजते हैं।
-      वही पता दोबारा लिखने पर मिलान हो जाता है, किंतु उससे आपका पता पढ़ा नहीं जा सकता।</li>
-    <li>साथ में केवल Razorpay के ऑर्डर/पेमेंट पहचानकर्ता और राशि सहेजी जाती है।</li>
-    <li>हम कोई प्रचार-ईमेल नहीं भेजते। हमारे पास कोई मेलिंग सूची है ही नहीं।</li>
-    <li>आपके कार्ड/UPI/बैंक विवरण Razorpay संभालता है — हम उन्हें कभी नहीं देखते।</li>
+    <li>Google ऐप को एक हस्ताक्षरित (signed) टोकन देता है, जिसे ऐप एन्क्रिप्टेड HTTPS द्वारा
+      हमारे सर्वर पर भेजता है।</li>
+    <li>हमारा सर्वर Google की सार्वजनिक कुंजियों से उसका हस्ताक्षर जाँचता है और उसमें से
+      <strong>केवल एक चीज़</strong> पढ़ता है — <em>खाता पहचानकर्ता</em> (Google इसे
+      <code>sub</code> कहता है), जो उस खाते की एक स्थायी, अर्थहीन-सी संख्या है। बाकी सब छोड़
+      दिया जाता है, और टोकन स्वयं हमारे सर्वर पर सहेजा नहीं जाता।</li>
+    <li><strong>हम आपका ईमेल पता, नाम या प्रोफ़ाइल फ़ोटो नहीं सहेजते।</strong> चूँकि पहचानकर्ता
+      आपका ईमेल नहीं है, इसलिए बाद में ईमेल बदलने पर भी आपका अनलॉक बना रहता है — और हम चाहकर भी
+      आपको कोई प्रचार-ईमेल नहीं भेज सकते।</li>
+    <li>इसका उपयोग केवल एक काम के लिए है: कोई और आपकी ख़रीद पर दावा न कर सके, और उसी खाते से
+      साइन-इन करके आप नए फ़ोन पर अपना अनलॉक वापस पा सकें।</li>
   </ul>
 
+  <p><strong>हमारे सर्वर पर क्या रहता है।</strong> भुगतान सफल होने पर आपके खाता पहचानकर्ता के
+  साथ एक छोटा-सा रिकॉर्ड लिखा जाता है: पहचानकर्ता, "अनलॉक: हाँ", Razorpay का order ID और
+  payment ID, चुकाई गई राशि और तिथि। बस इतना ही। उसमें कोई नाम, ईमेल, फ़ोन नंबर, पता या
+  डिवाइस-जानकारी नहीं होती।</p>
+
+  <p><strong>Razorpay का हिस्सा।</strong> आपके कार्ड/UPI/बैंक विवरण Razorpay संभालता है — हम
+  उन्हें कभी नहीं देखते। Razorpay की अपनी checkout स्क्रीन रसीद के लिए आपसे संपर्क विवरण माँग
+  सकती है; वहाँ जो भी आप भरते हैं वह Razorpay के पास जाता है, हमारे पास नहीं, और ऐप उसे न तो
+  स्वयं भरता है न पढ़ता है। भुगतान को सही अनलॉक से मिलाने के लिए खाता पहचानकर्ता का एक छोटा
+  हिस्सा order reference के रूप में Razorpay को भेजा जाता है — वह आपका ईमेल नहीं है और उससे
+  आपसे संपर्क नहीं किया जा सकता।</p>
+
   <h3>4. सत्यापन सर्वर</h3>
-  <p>ख़रीद असली है या नहीं, यह जाँचने के लिए ऐप <strong>Google Firebase Cloud Functions</strong>
-  पर बने एक छोटे सर्वर फ़ंक्शन से एन्क्रिप्टेड HTTPS कनेक्शन द्वारा संपर्क करता है। किसी भी
-  इंटरनेट अनुरोध की तरह, इस दौरान आपके डिवाइस का IP पता अस्थायी रूप से संसाधित होता है। हम कोई
-  उपयोगकर्ता डेटाबेस नहीं रखते और इस जानकारी का ख़रीद-सत्यापन के अतिरिक्त कोई उपयोग नहीं करते।</p>
+  <p>ख़रीद असली है या नहीं यह जाँचने के लिए, और आपको अनलॉक वापस देने के लिए, ऐप
+  <strong>Cloudflare Workers</strong> पर बने हमारे एक छोटे सर्वर से एन्क्रिप्टेड HTTPS द्वारा
+  संपर्क करता है; भाग 3a वाला रिकॉर्ड <strong>Cloudflare Workers KV</strong> में रहता है।
+  हमारा यही एकमात्र सर्वर है जिससे ऐप कभी संपर्क करता है।</p>
+  <p>ऐप उससे केवल तीन स्थितियों में बात करता है: ख़रीद के समय, restore दबाने पर, और शुरू होते
+  समय <em>तभी</em> जब आप पहले से ख़रीद चुके हों। यदि आपने कुछ नहीं खरीदा, तो ऐप कोई नेटवर्क
+  अनुरोध करता ही नहीं।</p>
+  <p>किसी भी इंटरनेट अनुरोध की तरह, इस दौरान आपके डिवाइस का IP पता अस्थायी रूप से संसाधित होता
+  है। हम उसे अपने किसी रिकॉर्ड में नहीं रखते और ख़रीद-सत्यापन के अतिरिक्त उसका कोई उपयोग नहीं
+  करते। अपना काम करने के लिए हमारा सर्वर आगे केवल Google (सार्वजनिक कुंजियाँ और Play Developer
+  API) तथा Razorpay (भुगतान की पुष्टि) से संपर्क करता है।</p>
 
   <h3>5. डिवाइस अखंडता जाँच</h3>
-  <p>सशुल्क सामग्री की सुरक्षा के लिए ऐप <strong>Google Play Integrity API</strong> का उपयोग कर
-  सकता है, जो यह पुष्टि करता है कि ऐप एक असली, अपरिवर्तित Android डिवाइस पर चल रहा है। इसका
-  उपयोग आपकी व्यक्तिगत पहचान के लिए नहीं होता।</p>
+  <p>ऐप में <strong>Google Play Integrity API</strong> की व्यवस्था मौजूद है, किंतु
+  <strong>यह जाँच फ़िलहाल बंद है</strong> और इसके ज़रिए कोई डिवाइस पहचानकर्ता एकत्र नहीं होता।
+  भविष्य में इसे चालू करने से पहले हम यह पृष्ठ अद्यतन करेंगे। चालू होने पर भी इसका उपयोग आपकी
+  व्यक्तिगत पहचान के लिए नहीं होगा।</p>
 
   <h3>6. ऑडियो</h3>
   <p>ऐप में सम्मिलित श्लोक-पाठ वाग्धेनु AI द्वारा निर्मित हैं और एन्क्रिप्टेड रूप में ऐप के
   भीतर ही हैं। ऐप कभी ऑडियो रिकॉर्ड नहीं करता और माइक्रोफ़ोन की अनुमति नहीं माँगता।</p>
 
   <h3>7. डेटा साझा करना या बेचना</h3>
-  <p>हम आपका डेटा किसी को नहीं बेचते, न किराए पर देते हैं, न साझा करते हैं — क्योंकि हम
-  व्यक्तिगत डेटा एकत्र ही नहीं करते। इस ऐप में कोई विज्ञापन साझेदार, डेटा ब्रोकर या
-  तृतीय-पक्ष एनालिटिक्स नहीं है।</p>
+  <p>हम आपका डेटा किसी को नहीं बेचते, न किराए पर देते हैं, न साझा करते हैं। इस ऐप में कोई
+  विज्ञापन साझेदार, डेटा ब्रोकर या तृतीय-पक्ष एनालिटिक्स नहीं है। केवल चार तृतीय पक्ष शामिल
+  हैं, और वे भी तभी जब आप ख़रीद या restore चुनते हैं: <strong>Google Play Billing</strong>
+  (Play संस्करण में भुगतान), <strong>Google Sign-In</strong> (Indus संस्करण में पहचान),
+  <strong>Razorpay</strong> (Indus संस्करण में भुगतान), और <strong>Cloudflare</strong>
+  (सत्यापन सर्वर)।</p>
 
-  <h3>8. आपके अधिकार</h3>
+  <h3>8. डेटा कितने समय रखा जाता है</h3>
+  <p>आपके फ़ोन का डेटा तब तक रहता है जब तक आप उसे हटाएँ या ऐप अनइंस्टॉल करें। Play वाले
+  प्रवाह में हमारे सर्वर पर कुछ भी सहेजा नहीं जाता। Indus वाले प्रवाह में भाग 3a का अनलॉक
+  रिकॉर्ड तब तक रहता है जब तक आपकी ख़रीद वैध है — उसे हटाना आपकी चुकाई हुई पहुँच छीन लेना
+  होगा। वह तभी हटता है जब आप कहें (भाग 9) या भुगतान वापस (refund) हो जाए। भुगतान के रिकॉर्ड
+  Google Play या Razorpay अपनी नीतियों और भारतीय कर-नियमों के अनुसार अलग से रखते हैं।</p>
+
+  <h3>9. आपके अधिकार</h3>
   <ul>
-    <li><strong>डेटा हटाना:</strong> ऐप अनइंस्टॉल करने पर सब कुछ हट जाता है। आप
+    <li><strong>फ़ोन का डेटा हटाना:</strong> ऐप अनइंस्टॉल करने पर सब कुछ हट जाता है। आप
       Settings → Apps → गीता श्लोक पथ → Storage से भी साफ़ कर सकते हैं।</li>
-    <li><strong>ख़रीद संबंधी प्रश्न:</strong> रिफ़ंड और भुगतान रिकॉर्ड आपके Google Play खाते से
-      संभाले जाते हैं।</li>
+    <li><strong>सर्वर का रिकॉर्ड हटवाना:</strong> जिस Google खाते से ख़रीद की थी, उसी से हमें
+      लिखिए — हम रिकॉर्ड हटा देंगे। ध्यान रहे, इससे आपका अनलॉक भी चला जाएगा और वापस नहीं मिल
+      सकेगा, इसलिए यही चाहते हों तभी कहिए।</li>
+    <li><strong>जानकारी माँगना:</strong> आप पूछ सकते हैं कि आपके खाते के लिए हमारे पास क्या है,
+      हम बता देंगे। जैसा भाग 3a में लिखा है, वह एक छोटा-सा रिकॉर्ड है जिसमें आपका नाम या ईमेल
+      है ही नहीं।</li>
+    <li><strong>सहमति वापस लेना:</strong> साइन-इन न करके आप कभी भी रुक सकते हैं — वह केवल
+      ख़रीद और restore पर ही माँगा जाता है।</li>
+    <li><strong>ख़रीद संबंधी प्रश्न:</strong> Play वाली ख़रीद के रिफ़ंड आपके Google Play खाते
+      से, और Indus वाली ख़रीद के हमारे द्वारा — देखें <a href="refund.html">रिफ़ंड नीति</a>।</li>
     <li><strong>प्रश्न:</strong> आप कभी भी नीचे दिए पते पर हमें लिख सकते हैं।</li>
   </ul>
 
-  <h3>9. बच्चों की गोपनीयता</h3>
+  <h3>10. बच्चों की गोपनीयता</h3>
   <p>यह ऐप सामान्य दर्शकों के लिए है और बच्चों को लक्षित नहीं करता। यह किसी से भी — बच्चों सहित
-  — जानबूझकर कोई व्यक्तिगत जानकारी एकत्र नहीं करता।</p>
+  — जानबूझकर कोई व्यक्तिगत जानकारी एकत्र नहीं करता। यदि आपको लगता है कि किसी बच्चे ने ख़रीद कर
+  ली है, तो हमें लिखिए — हम रिकॉर्ड हटा देंगे और रिफ़ंड में सहायता करेंगे।</p>
 
-  <h3>10. सुरक्षा</h3>
+  <h3>11. सुरक्षा</h3>
   <p>ऑडियो दो स्तरों पर एन्क्रिप्टेड है — पहले ऐप में पैक करने से पूर्व, और फिर पहली बार खोलने
   पर आपके ही डिवाइस के Android Keystore में बनी कुंजी से, जो कभी डिवाइस से बाहर नहीं जाती।
-  ऐप के सभी नेटवर्क अनुरोध HTTPS पर होते हैं।</p>
+  ऐप के सभी नेटवर्क अनुरोध HTTPS पर होते हैं। भुगतान की राशि ऐप नहीं, हमारा सर्वर तय करता है,
+  और हर भुगतान अनलॉक देने से पहले सीधे Razorpay से दोबारा जाँचा जाता है।</p>
 
-  <h3>11. नीति में परिवर्तन</h3>
+  <h3>12. नीति में परिवर्तन</h3>
   <p>यदि ऐप का व्यवहार इस नीति को प्रभावित करने वाले ढंग से बदलता है, तो हम यह पृष्ठ अद्यतन
   करेंगे और ऊपर दी गई तिथि बदल देंगे।</p>
 
-  <h3>12. संपर्क</h3>
+  <h3>13. संपर्क</h3>
   <div class="callout">
     <strong>ईमेल:</strong> <a href="mailto:sanatanlabs01@gmail.com">sanatanlabs01@gmail.com</a><br>
-    <strong>डेवलपर:</strong> सनातन लैब्स, भारत
+    <strong>डेवलपर:</strong> सनातन लैब्स, भारत<br>
+    <strong>शिकायत संपर्क:</strong> यही पता। हम 2 कार्यदिवस में उत्तर देते हैं और 30 दिन के
+    भीतर समाधान का प्रयास करते हैं।
   </div>
 
 
   <footer>
     ॥ सर्वे भवन्तु सुखिनः ॥<br><br>
     Sanatan Labs · India · <a href="mailto:sanatanlabs01@gmail.com">sanatanlabs01@gmail.com</a><br>
-    Privacy Policy · Last updated 6 September 2026
+    Privacy Policy · Last updated 8 September 2026
   </footer>
 </div>
 </body>
